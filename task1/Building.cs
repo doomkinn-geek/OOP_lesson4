@@ -12,7 +12,7 @@ namespace task1
         private uint _flatsCount;
         private uint _entrancesCount;
 
-        private static uint _lastBuildingNumber = 1;
+        private static uint _lastBuildingNumber = 0;
 
         public uint Number 
         { 
