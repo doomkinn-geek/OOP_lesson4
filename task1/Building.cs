@@ -42,9 +42,38 @@ namespace task1
             set { _entrancesCount = value; }
         }
 
+        private uint GenerateBuildingNumber()
+        {
+            return _lastBuildingNumber++;
+        }
+        public uint FloorHeight(uint _flatNumber)
+        {
+            try
+            {
+                uint res;
+                uint _flatsInEntrance = this.FlatsCount / this.EntrancesCount;
+                uint _flatsInFloor = _flatsInEntrance / this.FloorsCount;
+                uint _relativeApartmentNumber = _flatNumber % _flatsInEntrance;
+                if (_relativeApartmentNumber == 0)
+                {
+                    res = _flatNumber / _flatsInFloor;
+                }
+                else
+                {
+                    res = _relativeApartmentNumber / _flatsInFloor;
+                }
+                return res;
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine($"Ошибка: {e.Message}");
+                return 0;
+            }
+        }
+
         public Building()
         {
-            return;
+            _number = GenerateBuildingNumber();
         }
     }
 }
