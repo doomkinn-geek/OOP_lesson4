@@ -51,18 +51,17 @@ namespace task1
             try
             {
                 uint res;
-                uint _flatsInEntrance = this.FlatsCount / this.EntrancesCount;
-                uint _flatsInFloor = _flatsInEntrance / this.FloorsCount;
-                uint _relativeApartmentNumber = _flatNumber % _flatsInEntrance;
-                if (_relativeApartmentNumber == 0)
+                
+                uint _relativeApartmentNumber = _flatNumber % this.FlatsInEntrance();
+                res = _relativeApartmentNumber / this.FlatsInFloor();
+                if (_relativeApartmentNumber % this.FlatsInFloor() == 0)
                 {
-                    res = _flatNumber / _flatsInFloor;
+                    return res;
                 }
                 else
                 {
-                    res = _relativeApartmentNumber / _flatsInFloor;
+                    return res++;
                 }
-                return res;
             }
             catch(Exception e)
             {
@@ -71,9 +70,42 @@ namespace task1
             }
         }
 
+        public uint FlatsInEntrance()
+        {
+            if(this.FlatsCount == 0)
+            {
+                return 0;
+            }
+            if(this.FloorsCount == 0)
+            {
+                return 0;
+            }
+            return this.FlatsCount / this.EntrancesCount;
+        }
+
+        public uint FlatsInFloor()
+        {
+            if(this.FlatsCount == 0)
+            {
+                return 0;
+            }
+            if(this.FloorsCount == 0)
+            {
+                return 0;
+            }
+            return this.FlatsInEntrance() / this.FloorsCount;
+        }
+
         public Building()
         {
             _number = GenerateBuildingNumber();
+        }
+        public Building(uint buildingHeight, uint floorsCount, uint flatsCount, uint entrancesCount)
+        {
+            _number = GenerateBuildingNumber();
+            _buildingHeight = buildingHeight;
+            _floorsCount = floorsCount;
+            _entrancesCount = entrancesCount;
         }
     }
 }
