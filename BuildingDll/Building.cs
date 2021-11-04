@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Building
+namespace BuildingNS
 {
-    class Building
+    public class Building
     {
         private uint _number;
         private uint _buildingHeight;

@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 
-namespace Building
+namespace BuildingNS
 {
-    class Creator
+    public static class Creator
     {
         public static Hashtable Hashes = new Hashtable();      
         private static void AddToHashTable(Building building)

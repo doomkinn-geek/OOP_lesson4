@@ -1,6 +1,7 @@
 ﻿using System;
+using BuildingNS;
 
-namespace Building
+namespace BuildingTest
 {
     class Program
     {
