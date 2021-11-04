@@ -6,13 +6,17 @@ namespace Building
     {
         static void Main(string[] args)
         {
-            Building b = new Building();
-            b.BuildingHeight = 50;
-            b.EntrancesCount = 2;
-            b.FlatsCount = 30;
-            b.FloorsCount = 5;
-            b.Number = 1;
-            b.FloorHeight(25);
+            Building b1 = new Building();
+            b1.BuildingHeight = 50;
+            b1.EntrancesCount = 2;
+            b1.FlatsCount = 30;
+            b1.FloorsCount = 5;
+            b1.Number = 1;
+            b1.FloorHeight(25);
+
+            Building b2 = Creator.CreateBuild();
+            Console.WriteLine(b2);
+            Building b3 = Creator.CreateBuild(60, 6, 600, 10);
         }
     }
 }

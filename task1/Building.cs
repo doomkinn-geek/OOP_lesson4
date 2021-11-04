@@ -11,21 +11,17 @@ namespace Building
         private uint _floorsCount;
         private uint _flatsCount;
         private uint _entrancesCount;
-
         private static uint _lastBuildingNumber = 0;
-
         public uint Number 
         { 
             get => _number;
             set { _number = value; }
         }
-
         public uint BuildingHeight
         {
             get => _buildingHeight;
             set { _buildingHeight = value; }
         }
-
         public uint FloorsCount
         {
             get => _floorsCount;
@@ -41,7 +37,6 @@ namespace Building
             get => _entrancesCount;
             set { _entrancesCount = value; }
         }
-
         private uint GenerateBuildingNumber()
         {
             return _lastBuildingNumber++;
@@ -69,7 +64,6 @@ namespace Building
                 return 0;
             }
         }
-
         public uint FlatsInEntrance()
         {
             if(this.FlatsCount == 0)
@@ -82,7 +76,6 @@ namespace Building
             }
             return this.FlatsCount / this.EntrancesCount;
         }
-
         public uint FlatsInFloor()
         {
             if(this.FlatsCount == 0)
@@ -95,7 +88,10 @@ namespace Building
             }
             return this.FlatsInEntrance() / this.FloorsCount;
         }
-
+        public override string ToString()
+        {
+            return $"Здание номер {_number}, высотой {_buildingHeight} метров. Количество этажей: {_floorsCount}. Общее количество квартир: {_flatsCount}. Количество подъездов: {_entrancesCount}";
+        }
         public Building()
         {
             _number = GenerateBuildingNumber();
@@ -105,6 +101,7 @@ namespace Building
             _number = GenerateBuildingNumber();
             _buildingHeight = buildingHeight;
             _floorsCount = floorsCount;
+            _flatsCount = flatsCount;
             _entrancesCount = entrancesCount;
         }
     }
