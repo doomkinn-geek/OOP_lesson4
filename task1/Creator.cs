@@ -8,7 +8,7 @@ namespace Building
 {
     class Creator
     {
-        public static Hashtable Hashes;      
+        public static Hashtable Hashes = new Hashtable();      
         private static void AddToHashTable(Building building)
         {
             Hashes.Add(building.Number, "building");
@@ -31,7 +31,9 @@ namespace Building
         }
         private Creator()
         {
-            Hashes = new Hashtable();            
+            //Я не понял, зачем вообще здесь конструктор. Класс же статический. 
+            //Объясните, пожалуйста
+            return;     
         }
     }
 }

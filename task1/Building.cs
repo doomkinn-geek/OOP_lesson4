@@ -11,7 +11,7 @@ namespace Building
         private uint _floorsCount;
         private uint _flatsCount;
         private uint _entrancesCount;
-        private static uint _lastBuildingNumber = 0;
+        private static uint _lastBuildingNumber = 1;
         public uint Number 
         { 
             get => _number;
