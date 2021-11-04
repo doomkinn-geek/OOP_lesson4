@@ -29,7 +29,6 @@ namespace Building
         {
             Hashes.Remove(Convert.ToString(number));
         }
-
         private Creator()
         {
             Hashes = new Hashtable();            
