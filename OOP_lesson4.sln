@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task1", "task1\task1.csproj", "{1F00C5E1-8CD2-4988-8497-42EA1F0352AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingTest", "task1\BuildingTest.csproj", "{1F00C5E1-8CD2-4988-8497-42EA1F0352AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingDll", "BuildingDll\BuildingDll.csproj", "{E9713F09-D62B-45D0-9E4C-A0E7AC932778}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{1F00C5E1-8CD2-4988-8497-42EA1F0352AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F00C5E1-8CD2-4988-8497-42EA1F0352AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F00C5E1-8CD2-4988-8497-42EA1F0352AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9713F09-D62B-45D0-9E4C-A0E7AC932778}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9713F09-D62B-45D0-9E4C-A0E7AC932778}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9713F09-D62B-45D0-9E4C-A0E7AC932778}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9713F09-D62B-45D0-9E4C-A0E7AC932778}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
